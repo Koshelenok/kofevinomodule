@@ -1,7 +1,10 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@koshelenok/kofevinomodule",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/koshelenok"
+  },
+  "version": "0.0.1",
+  "private": false,
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.5",
