@@ -1,15 +1,17 @@
 {
   "name": "@koshelenok/kofevinomodule",
   "description": "Two test React components",
-
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/koshelenok"
   },
   "version": "0.0.2",
   "private": false,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "files": [ "dist", "README.md" ],
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Koshelenok/kofevinomodule.git"
@@ -27,6 +29,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
+    "rollup": "rollup -c",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -51,6 +54,11 @@
   "devDependencies": {
     "@babel/cli": "^7.21.5",
     "@babel/core": "^7.21.8",
-    "@babel/preset-env": "^7.21.5"
+    "@babel/preset-env": "^7.21.5",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "rollup": "^3.21.7",
+    "rollup-plugin-dts": "^5.3.0"
   }
 }
